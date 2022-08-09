@@ -25,13 +25,10 @@ abstract public class Animal {
     public <T extends Animal> Animal breed(Animal partner ){
         Animal babyAnimal = null;
         try {
-            babyAnimal = partner.getClass().getDeclaredConstructor().newInstance();
+            return partner.getClass().getDeclaredConstructor().newInstance();
         }
         catch(Exception e){
-
-        }
-        finally {
-            return babyAnimal;
+            return null;
         }
     }
     abstract public String breathe();
