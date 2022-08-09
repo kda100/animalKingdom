@@ -8,12 +8,12 @@ abstract public class Bird extends Animal {
     final private int numOfLegs = 2;
 
     public Bird(String name, Gender gender, double beakLength) {
-        super(name, gender);
+        super(name, gender, true);
         this.beakLength = beakLength;
     }
 
     public Bird(Gender gender, double beakLength) {
-        super(gender);
+        super(gender, true);
         this.beakLength = beakLength;
     }
 

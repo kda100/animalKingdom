@@ -16,7 +16,7 @@ abstract public class Mammal extends Animal {
     }
 
     public Mammal(Gender gender, int mammaryGlandsNum) {
-        super(gender);
+        super(gender, true);
         if(gender == Gender.FEMALE) {
             this.mammaryGlandsNum = mammaryGlandsNum;
         } else {
