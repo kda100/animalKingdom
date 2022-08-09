@@ -2,7 +2,6 @@ package org.example.Birds;
 
 import org.example.Fly;
 import org.example.Gender;
-
 public class FlyingRat extends Bird implements Fly {
     public FlyingRat(String name, Gender gender, double beakLength) {
         super(name, gender, beakLength);

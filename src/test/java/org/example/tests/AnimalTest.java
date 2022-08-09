@@ -1,5 +1,4 @@
 package org.example.tests;
-
 import org.example.Birds.Bird;
 import org.example.Birds.FlyingRat;
 import org.example.Birds.Penguin;

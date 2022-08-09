@@ -1,5 +1,4 @@
 package org.example.Mammals;
-
 import org.example.Animal;
 import org.example.Gender;
 
