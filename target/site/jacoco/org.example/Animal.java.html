@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Animal.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">animalKingdom</a> &gt; <a href="index.source.html" class="el_package">org.example</a> &gt; <span class="el_source">Animal.java</span></div><h1>Animal.java</h1><pre class="source lang-java linenums">package org.example;
+
+abstract public class Animal {
+
+    final public String name;
+    final public Gender gender;
+    final public Boolean isWarmBlooded;
+
+<span class="fc" id="L9">    private boolean isSleeping = false;</span>
+<span class="fc" id="L10">    private boolean isAlive = true;</span>
+
+    public Animal(String name, Gender gender, boolean isWarmBlooded) {
+<span class="fc" id="L13">        super();</span>
+<span class="fc" id="L14">        this.name = name;</span>
+<span class="fc" id="L15">        this.gender = gender;</span>
+<span class="fc" id="L16">        this.isWarmBlooded = isWarmBlooded;</span>
+<span class="fc" id="L17">    }</span>
+
+    public Animal(Gender gender, boolean isWarmBlooded) {
+<span class="nc" id="L20">        this(&quot;Anoy&quot;, gender, isWarmBlooded);</span>
+<span class="nc" id="L21">    }</span>
+
+
+    abstract public String eat();
+    public &lt;T extends Animal&gt; Animal breed(Animal partner ){
+<span class="nc" id="L26">        Animal babyAnimal = null;</span>
+        try {
+<span class="nc" id="L28">            babyAnimal = partner.getClass().getDeclaredConstructor().newInstance();</span>
+        }
+<span class="nc" id="L30">        catch(Exception e){</span>
+
+        }
+        finally {
+<span class="nc" id="L34">            return babyAnimal;</span>
+        }
+    }
+    abstract public String breathe();
+
+    final public String move() {
+<span class="nc" id="L40">        return &quot;The animal is moving&quot;;</span>
+    }
+
+    final public String poop() {
+<span class="nc" id="L44">        return &quot;The animal is pooping&quot;;</span>
+    }
+
+    final public void sleep() {
+<span class="fc" id="L48">        isSleeping = true;</span>
+<span class="fc" id="L49">    }</span>
+
+    final public void wakeUp() {
+<span class="fc" id="L52">        this.isSleeping = false;</span>
+<span class="fc" id="L53">    }</span>
+
+    final public void dies() {
+<span class="pc bpc" id="L56" title="1 of 2 branches missed.">        if(this.isAlive) {</span>
+<span class="fc" id="L57">            this.isAlive = false;</span>
+        }
+<span class="fc" id="L59">    }</span>
+
+    final public String getName() {
+<span class="fc" id="L62">        return this.name;</span>
+    }
+
+    public Gender getGender() {
+<span class="nc" id="L66">        return gender;</span>
+    }
+
+    public boolean getIsSleeping() {
+<span class="fc" id="L70">        return isSleeping;</span>
+    }
+
+    public boolean getIsAlive() {
+<span class="fc" id="L74">        return isAlive;</span>
+    }
+
+    public Boolean getWarmBlooded() {
+<span class="nc" id="L78">        return isWarmBlooded;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>
