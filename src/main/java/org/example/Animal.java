@@ -4,24 +4,36 @@ abstract public class Animal {
 
     final public String name;
     final public Gender gender;
+    final public Boolean isWarmBlooded;
+
     private boolean isSleeping = false;
     private boolean isAlive = true;
 
-
-
-    public Animal(String name, Gender gender) {
+    public Animal(String name, Gender gender, boolean isWarmBlooded) {
         super();
         this.name = name;
         this.gender = gender;
+        this.isWarmBlooded = isWarmBlooded;
     }
 
-    public Animal(Gender gender) {
-        this("Anoy", gender);
+    public Animal(Gender gender, boolean isWarmBlooded) {
+        this("Anoy", gender, isWarmBlooded);
     }
 
 
     abstract public String eat();
-    abstract public String breed();
+    public <T extends Animal> Animal breed(Animal partner ){
+        Animal babyAnimal = null;
+        try {
+            babyAnimal = partner.getClass().getDeclaredConstructor().newInstance();
+        }
+        catch(Exception e){
+
+        }
+        finally {
+            return babyAnimal;
+        }
+    }
     abstract public String breathe();
 
     final public String move() {
@@ -60,5 +72,9 @@ abstract public class Animal {
 
     public boolean getIsAlive() {
         return isAlive;
+    }
+
+    public Boolean getWarmBlooded() {
+        return isWarmBlooded;
     }
 }

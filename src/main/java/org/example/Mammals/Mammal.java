@@ -7,7 +7,7 @@ abstract public class Mammal extends Animal {
     final int mammaryGlandsNum;
 
     public Mammal(String name, Gender gender, int mammaryGlandsNum) {
-        super(name, gender);
+        super(name, gender, true);
         if(gender == Gender.FEMALE) {
             this.mammaryGlandsNum = mammaryGlandsNum;
         } else {
@@ -22,12 +22,6 @@ abstract public class Mammal extends Animal {
         } else {
             this.mammaryGlandsNum = 0;
         }
-    }
-
-
-    @Override
-    final public String breed() {
-        return "The mammal is pregnant and then is giving birth";
     }
 
     @Override

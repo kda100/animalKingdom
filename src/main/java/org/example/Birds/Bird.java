@@ -18,11 +18,6 @@ abstract public class Bird extends Animal {
     }
 
     @Override
-    final public String breed() {
-        return "The bird is laying eggs";
-    }
-
-    @Override
     final public String breathe() {
         return "The bird is breathing";
     }
