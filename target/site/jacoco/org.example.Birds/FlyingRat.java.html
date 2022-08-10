@@ -2,37 +2,36 @@
 
 import org.example.Fly;
 import org.example.Gender;
-
 public class FlyingRat extends Bird implements Fly {
     public FlyingRat(String name, Gender gender, double beakLength) {
-<span class="fc" id="L8">        super(name, gender, beakLength);</span>
-<span class="fc" id="L9">    }</span>
+<span class="fc" id="L7">        super(name, gender, beakLength);</span>
+<span class="fc" id="L8">    }</span>
 
     public FlyingRat(Gender gender, double beakLength) {
-<span class="nc" id="L12">        super(gender, beakLength);</span>
-<span class="nc" id="L13">    }</span>
+<span class="nc" id="L11">        super(gender, beakLength);</span>
+<span class="nc" id="L12">    }</span>
 
     @Override
     public String eat() {
-<span class="nc" id="L17">        return &quot;The flying rat is eating bread through it's beak&quot;;</span>
+<span class="nc" id="L16">        return &quot;The flying rat is eating bread through it's beak&quot;;</span>
     }
 
     @Override
     public String takeOff() {
-<span class="nc" id="L22">        super.move();</span>
-<span class="nc" id="L23">        return &quot;The flying rat is flapping it's wings&quot;;</span>
+<span class="nc" id="L21">        super.move();</span>
+<span class="nc" id="L22">        return &quot;The flying rat is flapping it's wings&quot;;</span>
     }
 
     @Override
     public String flight() {
-<span class="nc" id="L28">        super.move();</span>
-<span class="nc" id="L29">        return &quot;The flying rat is gliding in the wind&quot;;</span>
+<span class="nc" id="L27">        super.move();</span>
+<span class="nc" id="L28">        return &quot;The flying rat is gliding in the wind&quot;;</span>
     }
 
     @Override
     public String landing() {
-<span class="nc" id="L34">        super.move();</span>
-<span class="nc" id="L35">        return &quot;The flying rat is coming down for a landing to annoy people&quot;;</span>
+<span class="nc" id="L33">        super.move();</span>
+<span class="nc" id="L34">        return &quot;The flying rat is coming down for a landing to annoy people&quot;;</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

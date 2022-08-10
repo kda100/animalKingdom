@@ -25,57 +25,54 @@ abstract public class Animal {
     public &lt;T extends Animal&gt; Animal breed(Animal partner ){
 <span class="nc" id="L26">        Animal babyAnimal = null;</span>
         try {
-<span class="nc" id="L28">            babyAnimal = partner.getClass().getDeclaredConstructor().newInstance();</span>
+<span class="nc" id="L28">            return partner.getClass().getDeclaredConstructor().newInstance();</span>
         }
 <span class="nc" id="L30">        catch(Exception e){</span>
-
-        }
-        finally {
-<span class="nc" id="L34">            return babyAnimal;</span>
+<span class="nc" id="L31">            return null;</span>
         }
     }
     abstract public String breathe();
 
     final public String move() {
-<span class="nc" id="L40">        return &quot;The animal is moving&quot;;</span>
+<span class="nc" id="L37">        return &quot;The animal is moving&quot;;</span>
     }
 
     final public String poop() {
-<span class="nc" id="L44">        return &quot;The animal is pooping&quot;;</span>
+<span class="nc" id="L41">        return &quot;The animal is pooping&quot;;</span>
     }
 
     final public void sleep() {
-<span class="fc" id="L48">        isSleeping = true;</span>
-<span class="fc" id="L49">    }</span>
+<span class="fc" id="L45">        isSleeping = true;</span>
+<span class="fc" id="L46">    }</span>
 
     final public void wakeUp() {
-<span class="fc" id="L52">        this.isSleeping = false;</span>
-<span class="fc" id="L53">    }</span>
+<span class="fc" id="L49">        this.isSleeping = false;</span>
+<span class="fc" id="L50">    }</span>
 
     final public void dies() {
-<span class="pc bpc" id="L56" title="1 of 2 branches missed.">        if(this.isAlive) {</span>
-<span class="fc" id="L57">            this.isAlive = false;</span>
+<span class="pc bpc" id="L53" title="1 of 2 branches missed.">        if(this.isAlive) {</span>
+<span class="fc" id="L54">            this.isAlive = false;</span>
         }
-<span class="fc" id="L59">    }</span>
+<span class="fc" id="L56">    }</span>
 
     final public String getName() {
-<span class="fc" id="L62">        return this.name;</span>
+<span class="fc" id="L59">        return this.name;</span>
     }
 
     public Gender getGender() {
-<span class="nc" id="L66">        return gender;</span>
+<span class="nc" id="L63">        return gender;</span>
     }
 
     public boolean getIsSleeping() {
-<span class="fc" id="L70">        return isSleeping;</span>
+<span class="fc" id="L67">        return isSleeping;</span>
     }
 
     public boolean getIsAlive() {
-<span class="fc" id="L74">        return isAlive;</span>
+<span class="fc" id="L71">        return isAlive;</span>
     }
 
     public Boolean getWarmBlooded() {
-<span class="nc" id="L78">        return isWarmBlooded;</span>
+<span class="nc" id="L75">        return isWarmBlooded;</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

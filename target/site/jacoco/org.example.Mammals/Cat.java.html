@@ -5,23 +5,28 @@ import org.example.Gender;
 import org.example.Mammals.Mammal;
 
 public class Cat extends Mammal {
-<span class="pc" id="L8">    int killCount = 0;</span>
-    public Cat(String name, Gender gender, int mammaryGlands) {
-<span class="fc" id="L10">        super(name, gender, 4);</span>
-<span class="fc" id="L11">    }</span>
+
+<span class="pc" id="L9">    private int killCount = 0;</span>
+    public Cat(String name, Gender gender) {
+<span class="fc" id="L11">        super(name, gender, 4);</span>
+<span class="fc" id="L12">    }</span>
 
     public Cat(Gender gender) {
-<span class="nc" id="L14">        super(gender, 4);</span>
-<span class="nc" id="L15">    }</span>
+<span class="nc" id="L15">        super(gender, 4);</span>
+<span class="nc" id="L16">    }</span>
 
     public void kill(Bird bird) {
-<span class="nc" id="L18">        bird.dies();</span>
-<span class="nc" id="L19">        killCount++;</span>
-<span class="nc" id="L20">    }</span>
+<span class="nc" id="L19">        bird.dies();</span>
+<span class="nc" id="L20">        killCount++;</span>
+<span class="nc" id="L21">    }</span>
 
     @Override
     public String eat() {
-<span class="nc" id="L24">        return &quot;The cat is eating cat food&quot;;</span>
+<span class="nc" id="L25">        return &quot;The cat is eating cat food&quot;;</span>
+    }
+
+    public int getKillCount() {
+<span class="nc" id="L29">        return killCount;</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>
